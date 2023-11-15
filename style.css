@@ -48,6 +48,10 @@ a {
                     color: white;
 }
 
+a:hover{    
+    color: yellow;
+}
+
 .divlink {
                     background-color: rgba(0, 0, 0, 0.692);
                     width: 75vw;
