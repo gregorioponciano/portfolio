@@ -11,6 +11,12 @@ body {
                     background-size: cover;
 }
 
+.img-gnar {
+                    margin: auto;
+                    width: 15vw;
+                    margin-top: 20px;
+}
+
 h1 { 
                     color: white;
                     text-align: center;
@@ -31,7 +37,7 @@ section{
 }
 
 #imagemdiv {
-                    background-image: url(caricatura/mandrake.jpg);
+                    background-image: url(caricatura/mandrake.png);
                     background-color: antiquewhite;
                     width: 80vw;
                     height: 500px;
