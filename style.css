@@ -11,10 +11,10 @@ body {
                     background-size: cover;
 }
 
-.img-gnar {
+.mascara {
                     margin: auto;
-                    width: 10vw;
-                    margin-top: 20px;
+                    width: 18vw;
+                    margin-top: 20px;              
 }
 
 h1 { 
@@ -75,11 +75,7 @@ img {
                     margin: 10px;
 }
 
-.img-gnar {
-                    margin: auto;
-                    width: 10vw;
-                    margin-top: 20px;
-}
+
 
 p {
                     color: white;
@@ -93,10 +89,11 @@ p {
 @media screen and (max-width: 768px) {
 
 
-.img-gnar {
+.mascara {
                     margin: auto;
-                    width: 15vw;
-                    margin-top: 20px;
+                    width: 30vw;
+                    margin-top: 40px;
+                    
 }
 
 p {
