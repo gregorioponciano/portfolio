@@ -281,7 +281,7 @@ li {
                         position: fixed;
                         bottom: 0;
                         border: 1px solid white;
-                        border-radius: 20px;
+                        border-radius: 0px;
                         width: 90vw;
 
     }
@@ -291,7 +291,7 @@ li {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        border-radius: 20px 20px 0px 0px;
+                        border-radius: 0px 0px 0px 0px;
                         margin: auto;
     }
     .sobre {
