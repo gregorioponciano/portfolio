@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+:root {
+                                                        --body: #121212;
+                                                        --header-content: #1e1e1f;
+                                                        --menu: #282829;
+                                                        --div: #232224;
+                                                        --color-a-hover-menu: #ffffff;
+                                                        --a-menu: #FEC800; 
+                                                        --color-p-content: #ffffff;
+}
+
+* {
+                                                        margin: 0;
+                                                        padding: 0px;
+                                                        box-sizing: border-box;
+}
+
+body {
+                                                        background-color: var(--body);
+                                                        color: white;
+                                                        font-family: Arial, Helvetica, sans-serif;
+                                                        display: flex;
+                                                        justify-content: center;
+}
+
+h1, h2, h3, p {
+                                                        margin: 10px;
+                                                        color: white;
+}
+
+a {
+                                                        text-decoration: none;
+                                                        color: white;
+}
+
+li {
+                                                        list-style: none;
+}
+    
+.header {
+                                                        margin: 50px 20px 20px 20px;
+                                                        border-radius: 22px;
+                                                        border: solid 1px rgba(255, 255, 255, 0.233);
+                                                        background-color: var(--header-content);
+                                                        width: 300px;
+                                                        text-align: center;
+}
+
+.p-header {
+                                                        display: none;
+}
+
+.img-perfil {
+                                                        background-color: var(--menu);
+                                                        width: 150px;
+                                                        margin: 20px auto;
+                                                        border-radius: 20px;
+}
+
+.p-dev-web {
+                                                        background-color: var(--menu);
+                                                        border-radius: 5px;
+                                                        padding: 3px;
+                                                        width: 150px;
+                                                        margin: auto;
+}
+
+.a-header { 
+    filter: contrast(100%);                                        
+}
+
+.img-redes-header {         
+ filter: invert(100%);
+
+}
+
+.header-info {
+                                                        display: flex;
+                                                        flex-flow: column nowrap;
+}
+
+.div-info {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin: 10px;
+                                                        text-align: left;                                        
+}
+
+.icon {
+                                                        box-shadow: -1px -1px 0px 0px rgba(255, 255, 255, 0.233);
+                                                        padding: 10px;   
+                                                        margin: 20px;  
+                                                        border-radius: 5px;                                    
+                                                        background-color: var(--menu);
+}
+
+        /*Menu inferior*/
+.section {
+                                                        background-color: var(--header-content);
+                                                        border-radius: 22px;
+                                                        margin: auto;
+                                                        margin: 50px 20px 20px 20px;
+                                                        width: 50%;
+                                                        border: solid 1px rgba(255, 255, 255, 0.233);
+}
+
+.nav-menu {
+                                                        display: flex;
+                                                        justify-content: right;
+                                                        border-radius: 0px 20px 0px 20px;
+                                            
+
+}
+
+.menu {
+                                                        background-color: var(--menu);
+                                                        width: 400px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: end;
+                                                        border-radius: 0px 20px 0px 20px;
+                                                        padding: 23px;
+                                                        border: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+.a-menu {
+                                                        color: white;
+                                                        text-decoration: none;
+                                                        padding: 24px 20px;
+
+                                                        transition: color 0.3s ease;
+}
+
+.sobre {
+                                                        border-radius: 0px 0px 0px 20px;
+}
+.a-menu:hover {
+                                                        color: var(--a-menu);
+}
+
+.a-menu.active {
+                                                        background-color: rgba(255, 255, 255, 0.479);
+}
+
+.content {
+                                                        display: none; /* Esconde todas as divs inicialmente */
+
+                                                        padding: 20px;
+}
+.content.active {
+                                                        display: block; /* Exibe apenas a div ativa */
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+
+
+@media screen and (max-width: 1249px) {
+        body {
+                                                display: block;
+        }
+                
+
+        .header-info,hr {
+                                                display: none;
+        }
+
+        .header {
+                                                margin: 20px auto;
+                                                width: 90vw;
+
+        }
+
+        .p-header {
+                                                display: block;
+                                                text-align: right;
+                                                padding: 7px 20px;
+        }
+
+        .container-header {
+                                                display: flex;
+                                                align-items: center;
+        }
+
+        .img-perfil {
+                                                width: 130px;
+                                                margin-left: 20px;
+        }
+
+        .nome-cargo {
+                                                margin: 20px;
+                    
+        }
+
+                    /*menu e conteudo*/
+        .section {
+                                                width: 90vw;
+                                                margin: 20px auto;
+                }
+
+        .nav-menu {
+                                                display: flex;
+                                                justify-content: right;                   
+        }
+
+        .menu {
+                                                background-color: var(--menu);
+                                                width: 400px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: end;
+                                                border-radius: 0px 20px 0px 20px;
+                                                padding: 23px;
+                                                border: 1px solid rgba(255, 255, 255, 0.233);
+        }
+
+        .a-menu {
+                                                color: white;
+                                                text-decoration: none;
+                                                padding: 24px 20px;
+        }
+
+}
+
+@media screen and (max-width: 1025px) {
+
+    body {
+                        display: block;
+    }
+
+    .header-info, hr {
+                        display: none;
+    }
+    
+    .header {
+                        margin: 20px auto;
+                        width: 90vw;
+
+    }
+
+    .p-header {
+                        text-align: right;
+                        padding: 7px 20px;
+    }
+
+    .container-header {
+                        display: flex;
+                        align-items: center;
+}
+
+    .img-perfil {
+                        width: 130px;
+                        margin-left: 20px;
+    }
+
+    .nome-cargo {
+                        margin: 20px;
+                        
+    }
+
+
+
+
+        /*menu inferior*/
+    .section {
+                        width: 90vw;
+                        margin: 10px auto;
+    }
+
+    .nav-menu {
+                        position: fixed;
+                        bottom: 0;
+                        border: 1px solid white;
+                        border-radius: 20px;
+                        width: 90vw;
+
+    }
+
+    .menu {
+                        width: 90vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 20px 20px 0px 0px;
+                        margin: auto;
+    }
+    .sobre {
+        border-radius: 0px 0px 0px 0px;
+}
+}
+
+

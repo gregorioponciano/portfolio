@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+        /*conteudo portfolio*/
+
+.portfolio {
+                display: flex;
+                align-items: center;
+        }
+
+.link-loja {
+
+}
+
+.img-portfolio {
+            width: 300px;
+            height: 200px;
+}
+
+
+
+
+@media screen and (max-width: 1249px) {
+
+
+
+}
+
+
+@media screen and (max-width: 1025px) {
+
+        .portfolio {
+                        display: block;
+                        text-align: center;
+        }
+
+}

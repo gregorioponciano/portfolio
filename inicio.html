@@ -1,52 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-
-    <title>SalmoneusPlay</title>
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/contatos.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
 </head>
 <body>
 
-    <header>
-        <div>
-            <img src="caricatura/mascara.png" alt="mascara" class="mascara">
-            <h1>@Gregorio Ponci</h1>
-            <p class="p-header">Seja muito bem vindo ao meu espaço, aqui vc encontra tudo de mais importante.</p>
+  <header class="header">
+    <p class="p-header">Bem Vindo!</p>
+    <div class="container-header">
+      <div class="div-img"><img src="images/foto-perfil.png" alt="perfil" class="img-perfil"></div>
+      <div class="nome-cargo">
+        <h2>Gregorio Ponciano</h2><br>
+        <p class="p-dev-web">Desenvolvedor web</p>
+      </div>
+    </div><br>
+    <hr style="width: 80%; margin: auto; border: 1px solid rgba(167, 153, 153, 0.349);"> <br>
+    <div class="header-info">
+      <div class="div-info">
+        <div class="icon"><i class="material-icons">mail</i></div>
+        <div class="email">
+          <p>Email</p>
+          <p>gregorio@exemplo.com</p>
         </div>
-    </header>
-    
-    
-        <section>
-            <article id="imagemdiv">
-                <div class="divlink">
-                    <img src="imagens/logo-instagram.jpg" alt="instagram">
-                    <h2> <a href="https://gregorioponciano.github.io/projeto/projeto.html" target="_blank">REDES SOCIAIS</a></h2>
-                </div>
-                <div class="divlink">
-                    <img src="imagens/what.png" alt="Whatzapp">
-                    <h2> <a href="https://wa.me/5514991761256?text=Ol%C3%A1%2C+Td+bem%3F+Como+posso+ajudar%3F" target="_blank"> WHATS</a> </h2>
-                </div>
-                <div class="divlink">
-                    <img src="imagens/discord-servidor.png" alt="Loja">
-                    <h2>  <a href="https://gregorioponciano.github.io/loja/inicio.html" target="_blank">LOJA</a> </h2>
-                </div>
-                <div class="divlink">
-                    <img src="imagens/doar.png" alt="Loja">
-                    <h2>  <a href="https://livepix.gg/salmoneus" target="_blank">DONATE</a> </h2>
-                </div>
+      </div>
+      <div class="div-info">
+        <div class="icon"><i class="material-icons">smartphone</i></div>
+        <div class="telefone">
+          <p>Telefone</p>
+          <p>(14) 991761256</p>
+        </div>
+      </div>
+      <div class="div-info">
+        <div class="icon"><i class="material-icons">calendar_month</i></div>
+        <div class="aniversario">
+          <p>Aniversário</p>
+          <p>By 1996</p>
+        </div>
+      </div>
+      <div class="div-info">
+        <div class="icon"><i class="material-icons">location_on</i></div>
+        <div class="localizacao">
+          <p>Localização</p>
+          <p>Brasil, São Paulo, Guaiçara</p>
+        </div>
+      </div>
+      <div class="redes">
+        <a href="#" class="a-header"><img src="images/facebook.png" alt="facebook" class="img-redes-header"></a>
+        <a href="https://api.whatsapp.com/send/?phone=5514991761256&text=Ol%C3%A1%2C+Td+bem%3F+Como+posso+ajudar%3F&type=phone_number&app_absent=0" class="a-header" target="_blank"><img src="images/whats.png" alt="whatsapp" class="img-redes-header"></a>
+        <a href="#" class="a-header"><img src="images/insta.png" alt="instagram" class="img-redes-header"></a>
+      </div>
+    </div>
+  </header>
 
-            </article>
-        </section>
+  <section class="section">
+    <nav class="nav-menu">
+      <ul class="menu" id="buttons">
+        <li><a href="#" class="a-menu sobre" onclick="showDiv('div1')">Sobre</a></li>
+        <li><a href="#" class="a-menu" onclick="showDiv('div2')">Retomar</a></li>
+        <li><a href="#" class="a-menu" onclick="showDiv('div3')">Portfólio</a></li>
+        <li><a href="#" class="a-menu contato" onclick="showDiv('div4')">Contato</a></li>
+      </ul>
+    </nav>
 
-        <footer>
-            <p class="p-footer">© 2024 | GregorioPonciano - Todos os Direitos Reservados.</p>
-        </footer>
-    
-    
+    <div class="content active" id="div1">
+      <h1>Sobre Mim</h1>
+      <p>Sou Diretor Criativo e Designer de UI/UX de Sydney, Austrália, trabalhando em desenvolvimento web e mídia impressa. Gosto de transformar problemas complexos em designs simples, bonitos e intuitivos.</p>
+      <p>Meu trabalho é construir seu site para que ele seja funcional e fácil de usar, mas ao mesmo tempo atraente. Além disso, adiciono um toque pessoal ao seu produto e garanto que ele seja atraente e fácil de usar. Meu objetivo é transmitir sua mensagem e identidade da forma mais criativa possível. Criei web design para muitas empresas de marcas famosas.</p>
+      <h1>O Que Estou Fazendo</h1>
+      <div class="estou-fazendo" id="web-design">
+             <h3>Desenvolvimento Web</h3>
+             <p>O design mais moderno e de alta qualidade feito em nível profissional.</p>
+      </div>
+
+      <div class="estou-fazendo" id="desenvolvimento-web">
+             <h3>Web design</h3>
+             <p>Desenvolvimento de sites de alta qualidade em nível profissional.</p>
+      </div>
+
+      <div class="estou-fazendo" id="aplicativos-moveis">
+             <h3>Aplicativos móveis</h3>
+             <p>Desenvolvimento profissional de aplicativos para iOS e Android.</p>
+      </div>
+
+      <div class="estou-fazendo" id="fotografia">
+             <h3>Fotografia</h3>
+             <p>Eu faço fotos de alta qualidade de qualquer categoria em nível profissional.</p>
+      </div>
+      <h2>Testemunhos</h2>
+    </div>
+
+    <div class="content" id="div2">
+      <div class="">
+        <h6>Lorem ipsum dolor sit amet consectetur...</h6>
+      </div>
+    </div>
+
+    <div class="content" id="div3">
+        <div class="portfolio">
+          <img src="images/portfolio/loja.jpg" alt="img-loja" class="img-portfolio">
+          <div class="link-loja">
+            <h1><a href="https://gregorioponciano.github.io/loja/inicio.html">Loja</a></h1>
+            <p>Loja pessoal</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="content" id="div4">
+        <div class="div-frame">
+          <iframe src="https://gregorioponciano.github.io/projeto/projeto.html" frameborder="0" class="iframe"></iframe>
+        </div>
+        <a href="https://gregorioponciano.github.io/projeto/projeto.html">Redes Sociais</a>
+        <a href="https://livepix.gg/salmoneus">PIX</a>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+
 </body>
 </html>
