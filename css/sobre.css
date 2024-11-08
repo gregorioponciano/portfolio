@@ -44,7 +44,7 @@
 .estou-fazendo {
 
                         margin: 15px;
-                        width: calc(40% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
+                        width: calc(49.33% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
                         margin: auto;
 
 }
@@ -65,7 +65,9 @@
 
 .estou-fazendo {
 
-                height: 200px;
+                height: 150px;
+                align-items: center;
+                justify-content: center;
                 margin: 15px;
                 width: 100%;
 
