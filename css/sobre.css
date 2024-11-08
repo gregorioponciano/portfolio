@@ -2,74 +2,68 @@
 
         /*conteudo sobre*/
 .content {
-                                                        margin: 0px 20px 20px 20px; 
-                                                        border-radius: 22px;  
+                                                                        margin: 0px 20px 20px 20px; 
+                                                                        border-radius: 22px;  
 }
 
 .container-estou-fazendo {
-                                                        display: flex;
-                                                        flex-wrap: wrap;
-                                                        gap: 10px;
+                                                                        display: flex;
+                                                                        flex-wrap: wrap;
+                                                                        gap: 10px;
 }
 
 .estou-fazendo {
-                                                        display: flex;
-                                                        background-color: var(--div);
-                                                        border-radius: 22px;
-                                                        box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.082);          
-                                                        width: calc(50% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
+                                                                        display: flex;
+                                                                        background-color: var(--div);
+                                                                        border-radius: 22px;
+                                                                        box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.082);          
+                                                                        width: calc(50% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
 }
 
 .img-estou-fazendo {
-                                                        width: 50px;
-                                                        height: 50px;
+                                                                        width: 50px;
+                                                                        height: 50px;
 }
 
 @media screen and (max-width: 1249px) {
 
-                    /*conteudo do site*/
-.content {
-                                        margin: 0px 20px 20px 20px;
-                                        padding: 35px 25px 15px 25px;
-                                        margin: auto;
+                                /*conteudo sobre*/
+                .content {
+                                                                margin: 0px 20px 20px 20px;
+                                                                padding: 35px 25px 15px 25px;
+                                                                margin: auto;
+                }
 
+                .container-estou-fazendo {       
+                }
 
+                .estou-fazendo {
+                                                                margin: 15px;
+                                                                width: calc(50% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
+                                                                margin: auto;
+                }
 }
-
-.container-estou-fazendo {
-        
-        
-}
-
-.estou-fazendo {
-
-                        margin: 15px;
-                        width: calc(49.33% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
-                        margin: auto;
-
-}
-
-}
-
 
 @media screen and (max-width: 1025px) {
-            /*conteudo do site*/
-.content {
-                margin: 0px 20px 20px 20px;
-                padding: 35px 25px 15px 25px; 
-}
 
-.container-estou-fazendo {
+                /*conteudo sobre*/
+        .content {
+                                                margin: 0px 20px 20px 20px;
+                                                padding: 35px 25px 15px 25px; 
+        }
+
+        .container-estou-fazendo {
                                                 flex-direction: column;
-}
+        }
 
-.estou-fazendo {
+        .estou-fazendo {
 
-                height: 150px;
-                align-items: center;
-                justify-content: center;
-                margin: 15px;
-                width: 100%;
+                                                height: 150px;
+                                                align-items: center;
+                                                justify-content: center;
+                                                padding: 5px;
+                                                margin: 15px;
+                                                width: 100%;
 
 }
 
