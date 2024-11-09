@@ -134,6 +134,7 @@ li {
 
 .sobre {
                                                         border-radius: 0px 0px 0px 20px;
+                                                        padding: 24px 24px 24px 44px;
 }
 .a-menu:hover {
                                                         color: var(--a-menu);
@@ -228,6 +229,11 @@ li {
                                                 color: white;
                                                 text-decoration: none;
                                                 padding: 24px 20px;
+        }
+
+        .sobre {
+            border-radius: 0px 0px 0px 20px;
+            padding: 24px 24px 24px 44px;
         }
 
 }
