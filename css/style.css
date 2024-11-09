@@ -24,10 +24,7 @@ body {
                                                         justify-content: center;
 }
 
-h1, h2, h3, p {
-                                                        margin: 10px;
-                                                        color: white;
-}
+
 
 a {
                                                         text-decoration: none;
@@ -66,15 +63,9 @@ li {
                                                         margin: auto;
 }
 
-.a-header { 
-    filter: contrast(100%);                                        
-}
-
+.a-header {                                             filter: contrast(100%);}
 .img-redes-header {         
- filter: invert(100%);
-
-}
-
+                                                        filter: invert(100%);}
 .header-info {
                                                         display: flex;
                                                         flex-flow: column nowrap;
@@ -182,10 +173,19 @@ li {
 
         }
 
+        .div-p-header {
+                                                display: flex;
+                                                justify-content: end;
+        }
+
         .p-header {
                                                 display: block;
                                                 text-align: right;
-                                                padding: 7px 20px;
+                                                color: var(--a-menu);
+                                                border: 1px solid rgba(255, 255, 255, 0.308);
+                                                padding: 7px;
+                                                border-radius: 0px 22px 0px 10px;
+                                                cursor: pointer;
         }
 
         .container-header {
@@ -254,10 +254,7 @@ li {
 
     }
 
-    .p-header {
-                        text-align: right;
-                        padding: 7px 20px;
-    }
+
 
     .container-header {
                         display: flex;
