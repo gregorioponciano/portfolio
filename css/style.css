@@ -119,8 +119,6 @@ li {
                                                         color: white;
                                                         text-decoration: none;
                                                         padding: 24px 20px;
-
-                                                        transition: color 0.3s ease;
 }
 
 .sobre {
@@ -137,25 +135,11 @@ li {
 
 .content {
                                                         display: none; /* Esconde todas as divs inicialmente */
-
                                                         padding: 20px;
 }
 .content.active {
                                                         display: block; /* Exibe apenas a div ativa */
 }
-
-@keyframes underline {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    to {
-        width: 100%;
-        opacity: 1;
-    }
-}
-
-
 
 @media screen and (max-width: 1249px) {
         body {
@@ -297,6 +281,7 @@ li {
     }
     .sobre {
         border-radius: 0px 0px 0px 0px;
+        padding: 24px;
 }
 }
 
