@@ -4,12 +4,13 @@
 }
 
 
-.div-frame {
-    position: fixed;
-    top: 50%;
-    left: 59%;
-    transform: translate(-50%, -50%);
-}
+    /* Estilo para o mapa ocupar todo o espaço disponível */
+    #map {
+        height: 300px;
+        width: 100%;
+    }
+
+
 
 iframe {
  height: 630px;
@@ -22,7 +23,7 @@ iframe {
     iframe {
         height:400px;
         width: 400px;
-        display: none;
+
         
 }
 
@@ -34,7 +35,7 @@ iframe {
     iframe {
         height:400px;
         width: 400px;
-        display: none;
+
         
 }
 }
