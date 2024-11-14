@@ -66,7 +66,7 @@ li {
 .a-header {                                             filter: contrast(100%);}
 .img-redes-header {         
                                                         filter: invert(100%);}
-.header-info {
+.header-contatcs{
                                                         display: flex;
                                                         flex-flow: column nowrap;
 }
@@ -148,7 +148,7 @@ li {
         }
                 
 
-        .header-info,hr {
+        .header-contatcs,hr {
                                                 display: none;
         }
 
