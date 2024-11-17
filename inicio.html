@@ -21,7 +21,7 @@
       <p class="p-header" id="show-contatcs" onclick="showContatcs()">Show Contatcs</p>
     </div>
     <div class="container-header">
-      <div class="div-img"><img src="images/foto-perfil.png" alt="perfil" class="img-perfil"></div>
+      <div class="div-img"><img src="images/avatar-1.png" alt="perfil" class="img-perfil"></div>
       <div class="nome-cargo">
         <h2>Gregorio Ponciano</h2><br>
         <p class="p-dev-web">Desenvolvedor web</p>
@@ -153,7 +153,12 @@
             <a href="#" class="link-guia" onclick="toggleContent('guia6')">NROK</a><br>
             <div id="guia6" class="guia">
                 <!-- infomaçoes escondidas -->
-                Exposição de servidores locais para testes externos.
+                <pre>
+1 primeiro comando
+ngrok config add-authtoken (seu token)
+2 segundo comando
+ngrok http http://localhost:8080
+                </pre>
             </div>
             <a href="#" class="link-guia" onclick="toggleContent('guia7')">Bootstrap</a>
             <div id="guia7" class="guia">
