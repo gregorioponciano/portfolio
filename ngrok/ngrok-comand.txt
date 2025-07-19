@@ -1,0 +1,7 @@
+1 primeiro comando
+
+ngrok config add-authtoken 2maM4VO43o4sqMjpS0pHxReFMuv_4TPaVMujZET5qiqnDbnNW
+
+2 segundo comando
+
+ngrok http http://localhost:8080
