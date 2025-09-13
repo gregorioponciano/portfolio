@@ -1,31 +1,23 @@
-function showContatcs() {
-    var visualizar = document.getElementById('header-contatcs');
+// Espera a página carregar completamente antes de executar o script
+window.onload = function() {
+    // Seleciona o link de download pelo ID
+    const downloadLink = document.getElementById('downloadLink');
 
-    // Verifica o estado atual e alterna a exibição
-    if (visualizar.style.display === "block") {
-        visualizar.style.display = "none";
-    } else {
-        visualizar.style.display = "block";
-    }
-}
+    // Adiciona um "ouvinte de evento" para o clique no link
+    downloadLink.addEventListener('click', function(event) {
+        // Exibe a caixa de diálogo de confirmação
+        const confirmarDownload = confirm('Tem certeza que deseja baixar este arquivo?');
 
-// Função para garantir que o conteúdo seja mostrado ou escondido baseado no tamanho da tela
-function checkScreenSizeForContacts() {
-    var visualizar = document.getElementById('header-contatcs');
-
-    if (window.innerWidth > 1249) {
-        // Exibe o conteúdo se a tela for maior que 768px
-        if (visualizar.style.display === "none" || visualizar.style.display === "") {
-            visualizar.style.display = "block";
+        // Verifica a resposta do usuário
+        if (confirmarDownload === false) {
+            // Se o usuário clicou em "Cancelar"
+            // Impede que o link execute sua ação padrão (o download)
+            event.preventDefault();
+            console.log('Download cancelado pelo usuário.');
+        } else {
+            // Se o usuário clicou em "OK"
+            // O download continuará normalmente
+            console.log('Download iniciado.');
         }
-    } else {
-        // Esconde o conteúdo se a tela for menor ou igual a 768px
-        visualizar.style.display = "none";
-    }
-}
-
-// Adiciona o evento de redimensionamento para ajustar o conteúdo
-window.addEventListener('resize', checkScreenSizeForContacts);
-
-// Verifica o tamanho da tela quando a página for carregada
-document.addEventListener("DOMContentLoaded", () => checkScreenSizeForContacts());
+    });
+};
