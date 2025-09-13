@@ -112,8 +112,17 @@
         </div>  
       </div>
     </div>
-
     <div class="content" id="div2"> <!--Guia-->
+<div id="modal-container">      <!--modal confirma download-->
+    <div class="modal-content">
+        <h2>Confirmar Download</h2>
+        <p>Você tem certeza que deseja baixar o arquivo <span id="file-name"></span>?</p>
+        <div class="modal-buttons">
+            <button id="confirm-btn">Baixar</button>
+            <button id="cancel-btn">Cancelar</button>
+        </div>
+    </div>
+</div>     
       <h1 class="h1-guia">Guia do Programador</h1><br>
             <a href="#" class="link-guia" onclick="toggleContent('guia1')">HTML</a><br>
             <div id="guia1" class="guia">
@@ -124,8 +133,8 @@
                 <a href="https://gregorioponciano.github.io/html/ex004/video.html" target="_blank">Video</a><br>
                 <a href="https://gregorioponciano.github.io/html/ex007/fonte1.html" target="_blank">Fonte1</a> 
                 <a href="https://gregorioponciano.github.io/html/ex007/fonte2.html" target="_blank">Fonte2</a><br>
-                <a href="download/tabela.rar" target="_blank" class="btn-0download">Tabela</a><br>
-                <a href="download/formulario.rar" target="_blank" class="btn-0download">Formulário</a><br>
+                <a href="download/tabela.rar" target="_blank" class="btn-download">Tabela</a><br>
+                <a href="download/formulario.rar" target="_blank" class="btn-download">Formulário</a><br>
             </div>
             <a href="#" class="link-guia" onclick="toggleContent('guia2')">Css</a><br>
             <div id="guia2" class="guia">
@@ -144,13 +153,13 @@
             <a href="#" class="link-guia" onclick="toggleContent('guia4')">PYTHON</a><br>
             <div id="guia4" class="guia">
                 <!-- informaçoes escondidas -->
-                <p>Automação com python <a href="download/pyautogui.rar" style="color: blue;">pyautogui</a><br></p>
+                <p>Automação com python <a href="download/pyautogui.rar" class="btn-download" style="color: blue;">pyautogui</a><br></p>
                 
             </div>
             <a href="#" class="link-guia" onclick="toggleContent('guia5')">PHP</a><br>
             <div id="guia5" class="guia">
                 <!-- informaçoes escondidas -->
-                <a href="download/cursophp.rar">Curso PHP</a>
+                <a href="download/cursophp.rar" class="btn-download">Curso PHP</a>
             </div>
             <a href="#" class="link-guia" onclick="toggleContent('guia6')">MYSQL</a><br>
             <div id="guia6" class="guia">
@@ -173,12 +182,12 @@
             <a href="#" class="link-guia" onclick="toggleContent('guia9')">Tailwind</a><br>
             <div id="guia9" class="guia">
                 <!-- infomaçoes escondidas -->
-                HTML CSS e JavaScript. exemplo <a href="download/tailwind.rar" style="color: blue;">Tailwind</a><br>
+                HTML CSS e JavaScript. exemplo <a href="download/tailwind.rar" class="btn-download" style="color: blue;">Tailwind</a><br>
             </div>
             <a href="#" class="link-guia" onclick="toggleContent('guia10')">Electron</a>
             <div id="guia10" class="guia">
                 <!-- infomaçoes escondidas -->
-                cria um ambiente de software no pc <a href="download/electron.rar" style="color: blue;">Electron</a><br>
+                cria um ambiente de software no pc <a href="download/electron.rar" class="btn-download" style="color: blue;">Electron</a><br>
             </div><br><br>
             <h1>Sistema operacional</h1><br>         
             <a href="#" class="link-guia" onclick="toggleContent('guia11')">Windowns 11</a><br>
