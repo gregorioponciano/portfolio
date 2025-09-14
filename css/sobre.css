@@ -26,6 +26,11 @@
                                                                         box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.082);          
                                                                         width: calc(50% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
 }
+.estou-fazendo:hover {
+                                                                        border: 1px solid rgba(255, 255, 255, 0.486);
+                                                                        cursor: pointer;
+                                                                        transform: scale(1.1);
+}
 
 .img-estou-fazendo {
                                                                         width: 50px;
