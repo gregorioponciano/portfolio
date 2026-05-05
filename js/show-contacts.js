@@ -1,40 +1,44 @@
 (function () {
   'use strict';
 
-  var isMobile = window.innerWidth <= 1025;
+  var MOBILE_BREAKPOINT = 1249;
+  var RESIZE_DEBOUNCE_MS = 150;
+
   var headerContacts = document.getElementById('header-contacts');
   var showButton = document.getElementById('show-contacts');
+  var resizeTimer;
 
-  // Initially visible on desktop, hidden on mobile
-  if (headerContacts) {
-    if (isMobile) {
-      headerContacts.style.display = 'none';
-      if (showButton) showButton.textContent = 'Show Contacts';
+  if (!headerContacts) return;
+
+  function isMobile() {
+    return window.innerWidth <= MOBILE_BREAKPOINT;
+  }
+
+  function syncVisibility() {
+    var mobile = isMobile();
+
+    if (showButton) {
+      showButton.style.display = mobile ? 'block' : 'none';
+    }
+
+    if (!mobile) {
+      headerContacts.classList.remove('contacts-visible');
+      headerContacts.style.display = '';
     } else {
-      headerContacts.style.display = 'flex';
-      if (showButton) showButton.textContent = 'Hide Contacts';
+      headerContacts.style.display = headerContacts.classList.contains('contacts-visible') ? '' : 'none';
     }
   }
 
   window.addEventListener('resize', function () {
-    var nowIsMobile = window.innerWidth <= 1025;
-    if (isMobile !== nowIsMobile) {
-      location.reload();
-    }
-    isMobile = nowIsMobile;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(syncVisibility, RESIZE_DEBOUNCE_MS);
   });
 
-  function showContacts() {
-    if (!headerContacts) return;
+  window.showContacts = function () {
+    if (!isMobile()) return;
+    headerContacts.classList.toggle('contacts-visible');
+    syncVisibility();
+  };
 
-    if (headerContacts.style.display === 'none' || headerContacts.style.display === '') {
-      headerContacts.style.display = 'flex';
-      if (showButton) showButton.textContent = 'Hide Contacts';
-    } else {
-      headerContacts.style.display = 'none';
-      if (showButton) showButton.textContent = 'Show Contacts';
-    }
-  }
-
-  window.showContacts = showContacts;
+  syncVisibility();
 })();

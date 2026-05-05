@@ -86,8 +86,6 @@ h3 { font-size: 1.1rem; margin: 8px 0; }
   box-shadow: var(--shadow-card), var(--shadow-glow);
 }
 
-.p-header { display: none; }
-
 .img-perfil {
   background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-card));
   width: 150px;
@@ -333,6 +331,7 @@ h3 { font-size: 1.1rem; margin: 8px 0; }
   body { display: block; }
 
   .header-contacts, hr { display: none; }
+  .header-contacts.contacts-visible { display: flex; }
 
   .header {
     margin: 20px auto;
