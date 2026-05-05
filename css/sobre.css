@@ -1,90 +1,175 @@
 @charset "UTF-8";
 
-        /*conteudo sobre*/
-.content {
-                                                                        margin: 0px 20px 20px 20px; 
-                                                                        border-radius: 22px;  
+:root {
+  --bg-card: #18182a;
+  --accent: #00d4ff;
+  --accent-glow: rgba(0, 212, 255, 0.15);
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888a0;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.content {
+  margin: 0px 20px 20px 20px;
+  border-radius: var(--radius-lg);
+}
 
 .h1-estoufazendo {
-                                                                        margin-bottom: 20px;
+  margin: 24px 0 20px 0;
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .container-estou-fazendo {
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .estou-fazendo {
-                                                                        height: 100px;
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        background-color: var(--div);
-                                                                        border-radius: 22px;
-                                                                        box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.082);          
-                                                                        width: calc(50% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg-card), rgba(24, 24, 42, 0.8));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  width: calc(50% - 8px);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
 }
+
+.estou-fazendo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out-expo);
+}
+
 .estou-fazendo:hover {
-                                                                        border: 1px solid rgba(255, 255, 255, 0.486);
-                                                                        cursor: pointer;
-                                                                        transform: scale(1.1);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.2);
+}
+
+.estou-fazendo:hover::before {
+  opacity: 0.4;
+}
+
+.estou-fazendo aside {
+  margin-left: 16px;
+}
+
+.estou-fazendo h3 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  transition: color 0.3s var(--ease-out-expo);
+}
+
+.estou-fazendo:hover h3 {
+  color: var(--accent);
+}
+
+.estou-fazendo p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .img-estou-fazendo {
-                                                                        width: 50px;
-                                                                        height: 50px;
-                                                                        margin: 3px;
-                                                                        padding: 3px;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  background: rgba(0, 212, 255, 0.08);
+  border-radius: var(--radius-md);
+  transition: all 0.5s var(--ease-out-expo);
+  flex-shrink: 0;
+}
+
+.estou-fazendo:hover .img-estou-fazendo {
+  transform: scale(1.08) translateY(-4px);
+  background: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.2);
+}
+
+.estou-fazendo-footer {
+  margin-bottom: 50px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.img-redes-header {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-redes-header:hover {
+  transform: scale(1.15) translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
 }
 
 @media screen and (max-width: 1249px) {
+  .content {
+    margin: 0px 20px 20px 20px;
+    padding: 35px 25px 15px 25px;
+    margin: auto;
+  }
 
-                                /*conteudo sobre*/
-                .content {
-                                                                margin: 0px 20px 20px 20px;
-                                                                padding: 35px 25px 15px 25px;
-                                                                margin: auto;
-                }
-                
-                .container-estou-fazendo {       
-                }
-
-                .estou-fazendo {
-                                                                margin: 15px;
-                                                                width: calc(50% - 10px); /* Cada item ocupa 50% da largura com espaçamento */
-                                                                margin: auto;
-                }
+  .estou-fazendo {
+    margin: 15px;
+    width: calc(50% - 10px);
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 1025px) {
+  .content {
+    margin: 0px 20px 20px 20px;
+    padding: 35px 25px 15px 25px;
+  }
 
-                /*conteudo sobre*/
-        .content {
-                                                margin: 0px 20px 20px 20px;
-                                                padding: 35px 25px 15px 25px; 
-        }
-        .h1-estoufazendo {
-                                                text-align: center;
-}
-        .container-estou-fazendo {
-                                                flex-direction: column;
-        }
+  .h1-estoufazendo {
+    text-align: center;
+  }
 
-        .estou-fazendo {
+  .container-estou-fazendo {
+    flex-direction: column;
+  }
 
-                                                height: 150px;
-                                                align-items: center;
-                                                justify-content: center;
-                                                padding: 5px;
-                                                margin: 15px;
-                                                width: 100%;
+  .estou-fazendo {
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 15px;
+    width: 100%;
+  }
 
-        }
-
-        .estou-fazendo-footer {
-                                                margin-bottom: 50px;
-        }
-
+  .estou-fazendo-footer {
+    margin-bottom: 50px;
+  }
 }

@@ -8,17 +8,16 @@
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="css/contatos.css">
   <link rel="stylesheet" href="css/guia.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/x-icon">
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>portfolio</title>
-
+  <title>Gregório Ponciano - Desenvolvedor Web</title>
 </head>
 <body>
 
-  <header class="header"> <!--header-->
+  <header class="header header-animate">
     <div class="div-p-header">
-      <p class="p-header" id="show-contatcs" onclick="showContatcs()">Show Contatcs</p>
+      <p class="p-header" id="show-contacts" onclick="showContacts()">Show Contacts</p>
     </div>
     <div class="container-header">
       <div class="div-img"><img src="images/avatar-1.png" alt="perfil" class="img-perfil"></div>
@@ -28,36 +27,36 @@
       </div>
     </div><br>
     <hr style="width: 80%; margin: auto; border: 1px solid rgba(167, 153, 153, 0.349);"> <br>
-    <div class="header-contatcs" id="header-contatcs">
-      <div class="div-info">
+    <div class="header-contact" id="header-contacts">
+      <div class="div-info" data-delay="1">
         <div class="icon"><i class="material-icons">mail</i></div>
         <div class="email">
           <p>Email</p>
           <p>gregorio@exemplo.com</p>
         </div>
       </div>
-      <div class="div-info">
+      <div class="div-info" data-delay="2">
         <div class="icon"><i class="material-icons">smartphone</i></div>
         <div class="telefone">
           <p>Telefone</p>
           <p>(14) 991761256</p>
         </div>
       </div>
-      <div class="div-info">
+      <div class="div-info" data-delay="3">
         <div class="icon"><i class="material-icons">calendar_month</i></div>
         <div class="aniversario">
           <p>Aniversário</p>
           <p>By 1996</p>
         </div>
       </div>
-      <div class="div-info">
+      <div class="div-info" data-delay="4">
         <div class="icon"><i class="material-icons">location_on</i></div>
         <div class="localizacao">
           <p>Localização</p>
           <p>Brasil, São Paulo, Guaiçara</p>
         </div>
       </div>
-      <div class="redes">
+      <div class="redes" data-delay="5">
         <a href="#" class="a-header"><img src="images/facebook.jpg" alt="facebook" class="img-redes-header"></a>
         <a href="https://api.whatsapp.com/send/?phone=5514991761256&text=Ol%C3%A1%2C+Td+bem%3F+Como+posso+ajudar%3F&type=phone_number&app_absent=0" class="a-header" target="_blank"><img src="images/whatsapp.jpg" alt="whatsapp" class="img-redes-header"></a>
         <a href="#" class="a-header"><img src="images/instagram.jpg" alt="instagram" class="img-redes-header"></a>
@@ -65,234 +64,236 @@
     </div>
   </header>
 
-  <section class="section"> <!--menu e conteudo do site-->
-    <nav class="nav-menu"> <!--menu-->
-      <ul class="menu" id="buttons">
-        <li><a href="#" class="a-menu sobre" onclick="showDiv('div1')">Sobre</a></li>
-        <li><a href="#" class="a-menu" onclick="showDiv('div2')">Guia</a></li>
-        <li><a href="#" class="a-menu" onclick="showDiv('div3')">Portfólio</a></li>
-        <li><a href="#" class="a-menu contato" onclick="showDiv('div4')">Contato</a></li>
-      </ul>
-    </nav>
-
-    <div class="content active" id="div1"> <!--Sobre-->
-      <h1>Sobre Mim</h1> <br>
-      <p>Sou  Designer Criativo, trabalhando em desenvolvimento web e mídia impressa. Gosto de transformar problemas complexos em designs simples, bonitos e intuitivos.</p>
-      <p>Meu trabalho é construir seu site para que ele seja funcional e fácil de usar, mas ao mesmo tempo atraente. Além disso, adiciono um toque pessoal ao seu produto e garanto que ele seja atraente e fácil de usar. Meu objetivo é transmitir sua mensagem e identidade da forma mais criativa possível. Criei web design para muitas empresas de marcas famosas.</p><br>
-      <h1 class="h1-estoufazendo">O Que Estou Fazendo</h1>
+  <section class="section content-animate">
+    <div class="content" id="div1">
+      <h1 class="reveal">Sobre Mim</h1> <br>
+      <p class="reveal" data-delay="1">Sou Designer Criativo, trabalhando em desenvolvimento web e mídia impressa. Gosto de transformar problemas complexos em designs simples, bonitos e intuitivos.</p>
+      <p class="reveal" data-delay="2">Meu trabalho é construir seu site para que ele seja funcional e fácil de usar, mas ao mesmo tempo atraente. Além disso, adiciono um toque pessoal ao seu produto e garanto que ele seja atraente e fácil de usar. Meu objetivo é transmitir sua mensagem e identidade da forma mais criativa possível. Criei web design para muitas empresas de marcas famosas.</p><br>
+      <h1 class="h1-estoufazendo reveal" data-delay="3">O Que Estou Fazendo</h1>
 
       <div class="container-estou-fazendo">
-        <div class="estou-fazendo" id="web-design">
+        <div class="estou-fazendo reveal-scale" id="web-design" data-delay="4">
           <img src="images/sobre/icon-design.svg" class="img-estou-fazendo" alt="foto">
-               <aside>
-                 <h3>Desenvolvimento Web</h3>
-                 <p>Desenvolvimento de sites de alta qualidade em nível profissional.</p>
-               </aside>
+          <aside>
+            <h3>Desenvolvimento Web</h3>
+            <p>Desenvolvimento de sites de alta qualidade em nível profissional.</p>
+          </aside>
         </div>
-        <div class="estou-fazendo" id="desenvolvimento-web">
+        <div class="estou-fazendo reveal-scale" id="desenvolvimento-web" data-delay="5">
           <img src="images/sobre/icon-dev.svg" class="img-estou-fazendo" alt="foto">
-               <aside>
-                 <h3>Web design</h3>
-                 <p>O design mais moderno e de alta qualidade feito em nível profissional.</p>
-               </aside>
+          <aside>
+            <h3>Web design</h3>
+            <p>O design mais moderno e de alta qualidade feito em nível profissional.</p>
+          </aside>
         </div>
-        <div class="estou-fazendo" id="aplicativos-moveis">
+        <div class="estou-fazendo reveal-scale" id="aplicativos-moveis" data-delay="6">
           <img src="images/sobre/icon-app.svg" class="img-estou-fazendo" alt="foto">
-               <aside>
-                 <h3>Aplicativos móveis</h3>
-                 <p>Desenvolvimento profissional de aplicativos para iOS e Android.</p>
-               </aside>
+          <aside>
+            <h3>Aplicativos móveis</h3>
+            <p>Desenvolvimento profissional de aplicativos para iOS e Android.</p>
+          </aside>
         </div>
-        <div class="estou-fazendo estou-fazendo-footer" id="fotografia">
+        <div class="estou-fazendo estou-fazendo-footer reveal-scale" id="fotografia" data-delay="7">
           <img src="images/sobre/icon-photo.svg" class="img-estou-fazendo" alt="foto">
-               <aside class="aside-footer">
-                 <h3>Fotografia</h3>
-                 <p>Eu faço fotos de alta qualidade de qualquer categoria em nível profissional.</p>
-               </aside>
-        </div>  
+          <aside class="aside-footer">
+            <h3>Fotografia</h3>
+            <p>Eu faço fotos de alta qualidade de qualquer categoria em nível profissional.</p>
+          </aside>
+        </div>
       </div>
     </div>
-    <div class="content" id="div2"> <!--Guia-->
-<div id="modal-container">      <!--modal confirma download-->
-    <div class="modal-content">
-        <h2>Confirmar Download</h2>
-        <p>Você tem certeza que deseja baixar o arquivo <span id="file-name"></span>?</p>
-        <div class="modal-buttons">
+
+    <div class="content" id="div2">
+      <div id="modal-container">
+        <div class="modal-content">
+          <h2>Confirmar Download</h2>
+          <p>Você tem certeza que deseja baixar o arquivo <span id="file-name"></span>?</p>
+          <div class="modal-buttons">
             <button id="confirm-btn">Baixar</button>
             <button id="cancel-btn">Cancelar</button>
-        </div>
-    </div>
-</div>     
-      <h1 class="h1-guia">Guia do Programador</h1><br>
-            <a href="#" class="link-guia" onclick="toggleContent('guia1')">HTML</a><br>
-            <div id="guia1" class="guia">
-                <!-- Cinformaçoes escondidas -->
-                <a href="https://gregorioponciano.github.io/html/ex001/listas.html" target="_blank">Listas</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex002/index.html" target="_blank">Ancoras</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex003/audio.html" target="_blank">Audio</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex004/video.html" target="_blank">Video</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex007/fonte1.html" target="_blank">Fonte1</a> 
-                <a href="https://gregorioponciano.github.io/html/ex007/fonte2.html" target="_blank">Fonte2</a><br>
-                <a href="download/tabela.rar" target="_blank" class="btn-download">Tabela</a><br>
-                <a href="download/formulario.rar" target="_blank" class="btn-download">Formulário</a><br>
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia2')">Css</a><br>
-            <div id="guia2" class="guia">
-                <!-- informaçoes escondidas -->
-                <a href="https://gregorioponciano.github.io/html/ex006/cor.html" target="_blank">Cor</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex008/hover.html" target="_blank">Hover</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex016/filtros.html" target="_blank">filtros</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex013/mobilefirst/index.html" target="_blank">MediaQuery</a>
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia3')">JavaScript</a><br>
-            <div id="guia3" class="guia">
-                <!-- informaçoes escondidas -->
-                <a href="https://gregorioponciano.github.io/html/ex014/menu.html" target="_blank">Menu</a><br>
-                <a href="https://gregorioponciano.github.io/html/ex015/index.html" target="_blank">Modal</a>
-            </div>
-
-            <a href="#" class="link-guia" onclick="toggleContent('guia5')">PHP</a><br>
-            <div id="guia5" class="guia">
-                <!-- informaçoes escondidas -->
-                <a href="download/cursophp.rar" class="btn-download">Curso PHP</a>
-            </div>
- 
-            <a href="#" class="link-guia" onclick="toggleContent('guia7')">NGROK</a><br>
-            <div id="guia7" class="guia">
-                <!-- infomaçoes escondidas -->           
-                <p>1 primeiro comando</p><br>
-                <p>ngrok config add-authtoken (seu token)</p><br>
-                <p>2 segundo comando</p><br>
-                <p>ngrok http http://localhost:8080</p>       
-            </div>
-
-            <a href="#" class="link-guia" onclick="toggleContent('guia9')">Tailwind</a><br>
-            <div id="guia9" class="guia">
-                <!-- infomaçoes escondidas -->
-                HTML CSS e JavaScript. exemplo <a href="download/tailwind.rar" class="btn-download" style="color: blue;">Tailwind</a><br>
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia10')">Electron</a>
-            <div id="guia10" class="guia">
-                <!-- infomaçoes escondidas -->
-                cria um ambiente de software no pc <a href="download/electron.rar" class="btn-download" style="color: blue;">Electron</a><br>
-            </div><br><br>
-            <h1>Sistema operacional</h1><br>         
-
-            <a href="#" class="link-guia" onclick="toggleContent('guia12')">Linux</a><br>
-            <div id="guia12" class="guia">
-                <!-- infomaçoes escondidas -->
-                Configurações e ferramentas para desenvolvimento. 
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia13')">Kali Linux</a><br>
-            <div id="guia13" class="guia">
-                <!-- infomaçoes escondidas -->
-                Distribuição focada em segurança e testes de penetração.
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia14')">macOS</a>
-            <div id="guia14" class="guia">
-                <!-- infomaçoes escondidas -->
-                Sistema operacional para desenvolvedores Apple.
-            </div><br><br>
-            <h1>Firewall</h1><br>
-            <a href="#" class="link-guia" onclick="toggleContent('guia15')">REDES</a><br>
-            <div id="guia15" class="guia">
-                <!-- infomaçoes escondidas -->
-                Princípios de redes e protocolos para desenvolvedores.
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia16')">Segurança</a>
-            <div id="guia16" class="guia">
-                <!-- infomaçoes escondidas -->
-                Conteúdo da pergunta 13
-            </div><br><br>
-            <h1>Servidor</h1><br>
-            <a href="#" class="link-guia" onclick="toggleContent('guia17')">XAMPP</a><br>
-            <div id="guia17" class="guia">
-                <!-- informaçoes escondidas -->
-                Servidor local.
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia18')">API</a><br>
-            <div id="guia18" class="guia">
-                <!-- informaçoes escondidas -->
-                API's internas e externas 
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia19')">Apache</a><br>
-            <div id="guia19" class="guia">
-                <!-- informaçoes escondidas -->
-                Apache: Servidor web open-source robusto e modular, usado para hospedar sites e aplicações, suportando múltiplas linguagens e protocolos (HTTP/2, HTTPS). Essencial no stack LAMP para desenvolvimento.
-            </div>
-            <a href="#" class="link-guia" onclick="toggleContent('guia20')">ChatBot</a><br>
-            <div id="guia20" class="guia">
-                <!-- informaçoes escondidas -->
-                Chat Online.
-            </div>
-
-    </div>
-
-    <div class="content" id="div3"> <!--Portfolio-->
-        <div class="portfolio">
-          <div class="link-loja">
-            <img src="images/portfolio/laravel.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/guia-laravel/" target="_blank">Laravel - Framework</a></h1>
-            <p>PHP</p>
-          </div> 
-          <div class="link-loja">
-            <img src="images/portfolio/git-github.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/git-github/index.html#intro" target="_blank">Git - GitHub</a></h1>
-            <p>Roadmap</p>
-          </div> 
-          <div class="link-loja">
-            <img src="images/portfolio/mysql.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/mysql/index.html" target="_blank">Mysql</a></h1>
-            <p>Banco de Dados</p>
-          </div> 
-          <div class="link-loja">
-            <img src="images/portfolio/projeto-redes.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/projeto/projeto.html" target="_blank">Projeto - Redes Sociais</a></h1>
-            <p>Celular moderno</p>
-          </div> 
-          <div class="link-loja">
-            <img src="images/portfolio/loja.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/loja/inicio.html" target="_blank">Site de Loja Pessoal</a></h1>
-            <p>Loja pessoal</p>
-          </div>   
-          <div class="link-loja">
-            <img src="images/portfolio/cassino.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/layout/cassinos/public/inicio.html" target="_blank">Cassino Online</a></h1>
-            <p>Cassino online</p>
-          </div>  
-          <div class="link-loja">
-            <img src="images/portfolio/lanchonete.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/layout/lanchonete/painel.html" target="_blank">Food Delivery</a></h1>
-            <p>Lachonete</p>
-          </div>
-          <div class="link-loja">
-            <img src="images/portfolio/previsao.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/javascript/aplicativos/previsao/previsao.html" target="_blank">Previsão do Tempo</a></h1>
-            <p>Previsão em todo o mundo.</p>
-          </div>
-          <div class="link-loja">
-            <img src="images/portfolio/calculadora.jpg" alt="foto" class="img-portfolio">
-            <h1><a href="https://gregorioponciano.github.io/javascript/aplicativos/calculadora/index.html" target="_blank">Calculadora</a></h1>
-            <p>Soma em Java script.</p>
           </div>
         </div>
+      </div>
+
+      <h1 class="h1-guia reveal">Guia do Programador</h1><br>
+
+      <a href="#" class="link-guia reveal" data-delay="1" onclick="toggleContent('guia1')">HTML</a><br>
+      <div id="guia1" class="guia">
+        <a href="https://gregorioponciano.github.io/html/ex001/listas.html" target="_blank">Listas</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex002/index.html" target="_blank">Ancoras</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex003/audio.html" target="_blank">Audio</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex004/video.html" target="_blank">Video</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex007/fonte1.html" target="_blank">Fonte1</a>
+        <a href="https://gregorioponciano.github.io/html/ex007/fonte2.html" target="_blank">Fonte2</a><br>
+        <a href="download/tabela.rar" target="_blank" class="btn-download">Tabela</a><br>
+        <a href="download/formulario.rar" target="_blank" class="btn-download">Formulário</a><br>
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="2" onclick="toggleContent('guia2')">Css</a><br>
+      <div id="guia2" class="guia">
+        <a href="https://gregorioponciano.github.io/html/ex006/cor.html" target="_blank">Cor</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex008/hover.html" target="_blank">Hover</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex016/filtros.html" target="_blank">filtros</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex013/mobilefirst/index.html" target="_blank">MediaQuery</a>
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="3" onclick="toggleContent('guia3')">JavaScript</a><br>
+      <div id="guia3" class="guia">
+        <a href="https://gregorioponciano.github.io/html/ex014/menu.html" target="_blank">Menu</a><br>
+        <a href="https://gregorioponciano.github.io/html/ex015/index.html" target="_blank">Modal</a>
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="4" onclick="toggleContent('guia5')">PHP</a><br>
+      <div id="guia5" class="guia">
+        <a href="download/cursophp.rar" class="btn-download">Curso PHP</a>
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="5" onclick="toggleContent('guia7')">NGROK</a><br>
+      <div id="guia7" class="guia">
+        <p>1 primeiro comando</p><br>
+        <p>ngrok config add-authtoken (seu token)</p><br>
+        <p>2 segundo comando</p><br>
+        <p>ngrok http http://localhost:8080</p>
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="6" onclick="toggleContent('guia9')">Tailwind</a><br>
+      <div id="guia9" class="guia">
+        HTML CSS e JavaScript. exemplo <a href="download/tailwind.rar" class="btn-download" style="color: blue;">Tailwind</a><br>
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="7" onclick="toggleContent('guia10')">Electron</a>
+      <div id="guia10" class="guia">
+        cria um ambiente de software no pc <a href="download/electron.rar" class="btn-download" style="color: blue;">Electron</a><br>
+      </div><br><br>
+
+      <h1 class="reveal" data-delay="8">Sistema operacional</h1><br>
+
+      <a href="#" class="link-guia reveal" data-delay="8" onclick="toggleContent('guia12')">Linux</a><br>
+      <div id="guia12" class="guia">
+        Configurações e ferramentas para desenvolvimento.
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="9" onclick="toggleContent('guia13')">Kali Linux</a><br>
+      <div id="guia13" class="guia">
+        Distribuição focada em segurança e testes de penetração.
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="10" onclick="toggleContent('guia14')">macOS</a>
+      <div id="guia14" class="guia">
+        Sistema operacional para desenvolvedores Apple.
+      </div><br><br>
+
+      <h1 class="reveal" data-delay="8">Firewall</h1><br>
+
+      <a href="#" class="link-guia reveal" data-delay="8" onclick="toggleContent('guia15')">REDES</a><br>
+      <div id="guia15" class="guia">
+        Princípios de redes e protocolos para desenvolvedores.
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="9" onclick="toggleContent('guia16')">Segurança</a>
+      <div id="guia16" class="guia">
+        Conteúdo da pergunta 13
+      </div><br><br>
+
+      <h1 class="reveal" data-delay="8">Servidor</h1><br>
+
+      <a href="#" class="link-guia reveal" data-delay="8" onclick="toggleContent('guia17')">XAMPP</a><br>
+      <div id="guia17" class="guia">
+        Servidor local.
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="9" onclick="toggleContent('guia18')">API</a><br>
+      <div id="guia18" class="guia">
+        API's internas e externas
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="10" onclick="toggleContent('guia19')">Apache</a><br>
+      <div id="guia19" class="guia">
+        Apache: Servidor web open-source robusto e modular, usado para hospedar sites e aplicações, suportando múltiplas linguagens e protocolos (HTTP/2, HTTPS). Essencial no stack LAMP para desenvolvimento.
+      </div>
+
+      <a href="#" class="link-guia reveal" data-delay="10" onclick="toggleContent('guia20')">ChatBot</a><br>
+      <div id="guia20" class="guia">
+        Chat Online.
+      </div>
     </div>
-    <div class="content" id="div4"> <!--Contato-->
-      <iframe
-      id="map"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=-46.728, -23.632, -46.538, -23.472&layer=mapnik&marker=-23.55052,-46.633308"
-      allowfullscreen
-      loading="lazy">
-  </iframe>
-        <a href="https://gregorioponciano.github.io/projeto/projeto.html">Redes Sociais</a>
-        <a href="https://livepix.gg/salmoneus">PIX</a>
+
+    <div class="content" id="div3">
+      <div class="portfolio">
+        <div class="link-loja reveal-scale" data-delay="1">
+          <img src="images/portfolio/laravel.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/guia-laravel/" target="_blank">Laravel - Framework</a></h1>
+          <p>PHP</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="2">
+          <img src="images/portfolio/git-github.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/git-github/index.html#intro" target="_blank">Git - GitHub</a></h1>
+          <p>Roadmap</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="3">
+          <img src="images/portfolio/mysql.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/mysql/index.html" target="_blank">Mysql</a></h1>
+          <p>Banco de Dados</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="4">
+          <img src="images/portfolio/projeto-redes.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/projeto/projeto.html" target="_blank">Projeto - Redes Sociais</a></h1>
+          <p>Celular moderno</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="5">
+          <img src="images/portfolio/loja.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/loja/inicio.html" target="_blank">Site de Loja Pessoal</a></h1>
+          <p>Loja pessoal</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="6">
+          <img src="images/portfolio/cassino.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/layout/cassinos/public/inicio.html" target="_blank">Cassino Online</a></h1>
+          <p>Cassino online</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="7">
+          <img src="images/portfolio/lanchonete.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/layout/lanchonete/painel.html" target="_blank">Food Delivery</a></h1>
+          <p>Lanchonete</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="8">
+          <img src="images/portfolio/previsao.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/javascript/aplicativos/previsao/previsao.html" target="_blank">Previsão do Tempo</a></h1>
+          <p>Previsão em todo o mundo.</p>
+        </div>
+        <div class="link-loja reveal-scale" data-delay="9">
+          <img src="images/portfolio/calculadora.jpg" alt="foto" class="img-portfolio">
+          <h1><a href="https://gregorioponciano.github.io/javascript/aplicativos/calculadora/index.html" target="_blank">Calculadora</a></h1>
+          <p>Soma em JavaScript.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="div4">
+      <h2>Localização</h2>
+      <iframe id="map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-46.728, -23.632, -46.538, -23.472&layer=mapnik&marker=-23.55052,-46.633308"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+      <a href="https://gregorioponciano.github.io/projeto/projeto.html" class="reveal" data-delay="1">Redes Sociais</a>
+      <a href="https://livepix.gg/salmoneus" class="reveal" data-delay="2">PIX</a>
     </div>
   </section>
+
+  <nav class="nav-menu">
+    <ul class="menu" id="buttons">
+      <li><a href="#" class="a-menu sobre" onclick="showDiv('div1')">Sobre</a></li>
+      <li><a href="#" class="a-menu" onclick="showDiv('div2')">Guia</a></li>
+      <li><a href="#" class="a-menu" onclick="showDiv('div3')">Portfólio</a></li>
+      <li><a href="#" class="a-menu contato" onclick="showDiv('div4')">Contato</a></li>
+    </ul>
+  </nav>
 
   <script src="js/showMenu.js"></script>
   <script src="js/guia.js"></script>
   <script src="js/show-contatcs.js"></script>
   <script src="js/confirma-download.js"></script>
+  <script src="js/scrollAnimations.js"></script>
 
 </body>
 </html>

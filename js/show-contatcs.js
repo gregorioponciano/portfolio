@@ -1,23 +1,31 @@
-// Espera a página carregar completamente antes de executar o script
-window.onload = function() {
-    // Seleciona o link de download pelo ID
-    const downloadLink = document.getElementById('downloadLink');
+(function () {
+  'use strict';
 
-    // Adiciona um "ouvinte de evento" para o clique no link
-    downloadLink.addEventListener('click', function(event) {
-        // Exibe a caixa de diálogo de confirmação
-        const confirmarDownload = confirm('Tem certeza que deseja baixar este arquivo?');
+  var contactsVisible = false;
+  var isMobile = window.innerWidth <= 1025;
 
-        // Verifica a resposta do usuário
-        if (confirmarDownload === false) {
-            // Se o usuário clicou em "Cancelar"
-            // Impede que o link execute sua ação padrão (o download)
-            event.preventDefault();
-            console.log('Download cancelado pelo usuário.');
-        } else {
-            // Se o usuário clicou em "OK"
-            // O download continuará normalmente
-            console.log('Download iniciado.');
-        }
-    });
-};
+  window.addEventListener('resize', function () {
+    var nowIsMobile = window.innerWidth <= 1025;
+    if (isMobile !== nowIsMobile) {
+      location.reload();
+    }
+    isMobile = nowIsMobile;
+  });
+
+  function showContatcs() {
+    var headerContacts = document.getElementById('header-contatcs');
+    var showButton = document.getElementById('show-contatcs');
+    if (!headerContacts) return;
+
+    if (contactsVisible) {
+      headerContacts.style.display = 'none';
+      if (showButton) showButton.textContent = 'Show Contacts';
+    } else {
+      headerContacts.style.display = 'flex';
+      if (showButton) showButton.textContent = 'Hide Contacts';
+    }
+    contactsVisible = !contactsVisible;
+  }
+
+  window.showContatcs = showContatcs;
+})();

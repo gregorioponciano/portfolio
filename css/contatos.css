@@ -1,41 +1,83 @@
 @charset "UTF-8";
-* {
-        box-sizing: border-box;
+
+:root {
+  --bg-card: #18182a;
+  --accent: #00d4ff;
+  --accent-glow: rgba(0, 212, 255, 0.15);
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888a0;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+* {
+  box-sizing: border-box;
+}
 
-    /* Estilo para o mapa ocupar todo o espaço disponível */
-    #map {
-        height: 300px;
-        width: 100%;
-    }
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: box-shadow 0.4s var(--ease-out-expo);
+}
 
-
+#map:hover {
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.1);
+}
 
 iframe {
- height: 630px;
- width: 400px;
- 
+  height: 630px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s var(--ease-out-expo);
 }
 
-
-@media screen and (max-width: 1259px){
-    iframe {
-        height:400px;
-        width: 400px;
-
-        
+iframe:hover {
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.1);
 }
 
+#div4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-@media screen and (max-width: 1025px){
- 
-    
-    iframe {
-        height:400px;
-        width: 400px;
-
-        
+#div4 a {
+  display: inline-block;
+  color: var(--text-secondary);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s var(--ease-out-expo);
+  font-size: 0.95rem;
 }
+
+#div4 a:hover {
+  color: var(--accent);
+  background: var(--accent-glow);
+  border-color: rgba(0, 212, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.1);
+}
+
+@media screen and (max-width: 1249px) {
+  iframe {
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  iframe {
+    height: 400px;
+    width: 100%;
+  }
 }
