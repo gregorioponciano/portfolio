@@ -27,6 +27,7 @@
         currentActive.style.opacity = '';
         currentActive.style.transform = '';
         currentActive.style.transition = '';
+        currentActive.style.height = '';
 
         targetDiv.classList.add('active');
         targetDiv.style.opacity = '0';

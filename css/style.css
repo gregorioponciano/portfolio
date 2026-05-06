@@ -164,10 +164,8 @@ h3 { font-size: 1.1rem; margin: 8px 0; }
   width: 50%;
   border: 1px solid var(--border-subtle);
   position: relative;
-  min-height: 400px;
-  padding-bottom: 80px;
   box-shadow: var(--shadow-card);
-  overflow: hidden;
+  height: fit-content;
 }
 
 .section::before {
@@ -258,12 +256,16 @@ h3 { font-size: 1.1rem; margin: 8px 0; }
   transform: translateY(20px);
   transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 0;
+  overflow: hidden;
 }
 
 .content.active {
   display: block;
   opacity: 1;
   transform: translateY(0);
+  height: auto;
+  overflow: visible;
 }
 
 /* MODAL */
