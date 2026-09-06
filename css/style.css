@@ -70,7 +70,7 @@ h3 { font-size: 1.1rem; margin: 8px 0; }
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-subtle);
   background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
-  width: 300px;
+  width: 315px;
   text-align: center;
   box-shadow: var(--shadow-card);
   transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -81,7 +81,7 @@ h3 { font-size: 1.1rem; margin: 8px 0; }
   }
 
   .p-header { display: none; }
-
+  .p-info-header {text-align: left;}
   .img-perfil {
   box-shadow: var(--shadow-card), var(--shadow-glow);
 }

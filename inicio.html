@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Gregório Ponciano - Desenvolvedor Web</title>
+  <title>GPWeb - Desenvolvedor Web</title>
 </head>
 <body>
 
@@ -20,10 +20,10 @@
       <p class="p-header" id="show-contacts" onclick="showContacts()">Show Contacts</p>
     </div>
     <div class="container-header">
-      <div class="div-img"><img src="images/avatar-1.png" alt="perfil" class="img-perfil"></div>
+      <div class="div-img"><img src="images/gpweb.jpeg" alt="perfil" class="img-perfil"></div>
       <div class="nome-cargo">
-        <h2>Gregorio Ponciano</h2><br>
-        <p class="p-dev-web">Desenvolvedor web</p>
+        <h2>Seja Bem-vindo!</h2><br>
+        <p class="p-dev-web">Desenvolvedor de Sistemas</p>
       </div>
     </div><br>
     <hr style="width: 80%; margin: auto; border: 1px solid rgba(167, 153, 153, 0.349);"> <br>
@@ -31,41 +31,44 @@
       <div class="div-info" data-delay="1">
         <div class="icon"><i class="material-icons">mail</i></div>
         <div class="email">
-          <p>Email</p>
-          <p>gregorio@exemplo.com</p>
+          <p class="p-info-header">Email</p>
+          <p title="gpwebsolution.2020@gmail.com" 
+            style="display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">
+            gpwebsolution.2020@gmail.com
+          </p>
         </div>
       </div>
       <div class="div-info" data-delay="2">
         <div class="icon"><i class="material-icons">smartphone</i></div>
         <div class="telefone">
-          <p>Telefone</p>
+          <p class="p-info-header">Telefone</p>
           <p>(14) 991761256</p>
         </div>
       </div>
       <div class="div-info" data-delay="3">
         <div class="icon"><i class="material-icons">calendar_month</i></div>
         <div class="aniversario">
-          <p>Aniversário</p>
-          <p>By 1996</p>
+          <p class="p-info-header">Aniversário</p>
+          <p class="p-info-header">By 1996</p>
         </div>
       </div>
       <div class="div-info" data-delay="4">
         <div class="icon"><i class="material-icons">location_on</i></div>
         <div class="localizacao">
-          <p>Localização</p>
+          <p class="p-info-header">Localização</p>
           <p>Brasil, São Paulo, Guaiçara</p>
         </div>
       </div>
       <div class="redes" data-delay="5">
-        <a href="#" class="a-header"><img src="images/facebook.jpg" alt="facebook" class="img-redes-header"></a>
-        <a href="https://api.whatsapp.com/send/?phone=5514991761256&text=Ol%C3%A1%2C+Td+bem%3F+Como+posso+ajudar%3F&type=phone_number&app_absent=0" class="a-header" target="_blank"><img src="images/whatsapp.jpg" alt="whatsapp" class="img-redes-header"></a>
-        <a href="#" class="a-header"><img src="images/instagram.jpg" alt="instagram" class="img-redes-header"></a>
+        <a href="https://www.facebook.com/profile.php?id=61580637924160" target="_blank" class="a-header"><img src="images/facebook.jpg" alt="facebook" class="img-redes-header"></a>
+        <a href="https://api.whatsapp.com/send/?phone=5514991761256&text=Ol%C3%A1%2C+Td+bem%3F+Como+aumentar+minhas+vendas?%3F&type=phone_number&app_absent=0" target="_blank" class="a-header"><img src="images/whatsapp.jpg" alt="whatsapp" class="img-redes-header"></a>
+        <a href="https://www.instagram.com/gpwebsolution/" target="_blank" class="a-header"><img src="images/instagram.jpg" alt="instagram" class="img-redes-header"></a>
       </div>
     </div>
   </header>
 
   <section class="section content-animate">
-    <div class="content" id="div1">
+    <div class="content" id="div1">  <!-- Sobre mim -->
       <h1 class="reveal">Sobre Mim</h1> <br>
       <p class="reveal" data-delay="1">Sou Designer Criativo, trabalhando em desenvolvimento web e mídia impressa. Gosto de transformar problemas complexos em designs simples, bonitos e intuitivos.</p>
       <p class="reveal" data-delay="2">Meu trabalho é construir seu site para que ele seja funcional e fácil de usar, mas ao mesmo tempo atraente. Além disso, adiciono um toque pessoal ao seu produto e garanto que ele seja atraente e fácil de usar. Meu objetivo é transmitir sua mensagem e identidade da forma mais criativa possível. Criei web design para muitas empresas de marcas famosas.</p><br>
@@ -103,7 +106,7 @@
       </div>
     </div>
 
-    <div class="content" id="div2">
+    <div class="content" id="div2"> <!-- Guia do Programador -->
       <div id="modal-container">
         <div class="modal-content">
           <h2>Confirmar Download</h2>
@@ -117,7 +120,7 @@
 
       <h1 class="h1-guia reveal">Guia do Programador</h1><br>
 
-      <a href="#" class="link-guia reveal" data-delay="1" onclick="toggleContent('guia1')">HTML</a><br>
+      <a href="#" class="link-guia reveal" data-delay="1" onclick="toggleContent('guia1')"><img src="images/html.png" alt="img-html" class="img-guia"> HTML</a><br>
       <div id="guia1" class="guia">
         <a href="https://gregorioponciano.github.io/html/ex001/listas.html" target="_blank">Listas</a><br>
         <a href="https://gregorioponciano.github.io/html/ex002/index.html" target="_blank">Ancoras</a><br>
@@ -129,7 +132,7 @@
         <a href="download/formulario.rar" target="_blank" class="btn-download">Formulário</a><br>
       </div>
 
-      <a href="#" class="link-guia reveal" data-delay="2" onclick="toggleContent('guia2')">Css</a><br>
+      <a href="#" class="link-guia reveal" data-delay="2" onclick="toggleContent('guia2')"> <img src="images/css.webp" alt="img-css" class="img-guia"> Css</a><br>
       <div id="guia2" class="guia">
         <a href="https://gregorioponciano.github.io/html/ex006/cor.html" target="_blank">Cor</a><br>
         <a href="https://gregorioponciano.github.io/html/ex008/hover.html" target="_blank">Hover</a><br>
@@ -137,7 +140,7 @@
         <a href="https://gregorioponciano.github.io/html/ex013/mobilefirst/index.html" target="_blank">MediaQuery</a>
       </div>
 
-      <a href="#" class="link-guia reveal" data-delay="3" onclick="toggleContent('guia3')">JavaScript</a><br>
+      <a href="#" class="link-guia reveal" data-delay="3" onclick="toggleContent('guia3')"><img src="images/js.png" alt="img-js" class="img-guia"> JavaScript</a><br>
       <div id="guia3" class="guia">
         <a href="https://gregorioponciano.github.io/html/ex014/menu.html" target="_blank">Menu</a><br>
         <a href="https://gregorioponciano.github.io/html/ex015/index.html" target="_blank">Modal</a>
@@ -218,7 +221,7 @@
       </div>
     </div>
 
-    <div class="content" id="div3">
+    <div class="content" id="div3"> <!-- Portfólio -->
       <div class="portfolio">
         <div class="link-loja reveal-scale" data-delay="1">
           <img src="images/portfolio/laravel.jpg" alt="foto" class="img-portfolio">
@@ -268,10 +271,10 @@
       </div>
     </div>
 
-    <div class="content" id="div4">
+    <div class="content" id="div4"> <!-- Contato -->
       <h2>Localização</h2>
       <iframe id="map"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-46.728, -23.632, -46.538, -23.472&layer=mapnik&marker=-23.55052,-46.633308"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-49.8465, -21.6614, -49.7465, -21.5814, -23.472&layer=mapnik&marker=-21.6214,-49.7965"
         allowfullscreen
         loading="lazy">
       </iframe>
