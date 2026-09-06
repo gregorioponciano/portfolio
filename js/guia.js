@@ -6,9 +6,10 @@
     if (!content) return;
 
     var allGuides = document.querySelectorAll('.guia');
+    var isOpen = window.getComputedStyle(content).display === 'block';
 
     allGuides.forEach(function (guide) {
-      if (guide !== content && guide.style.display === 'block') {
+      if (guide !== content && window.getComputedStyle(guide).display === 'block') {
         guide.style.opacity = '0';
         guide.style.maxHeight = '0';
         guide.style.overflow = 'hidden';
@@ -22,7 +23,7 @@
       }
     });
 
-    if (content.style.display === 'block') {
+    if (isOpen) {
       content.style.opacity = '0';
       content.style.maxHeight = '0';
       content.style.overflow = 'hidden';

@@ -270,54 +270,7 @@ a.btn-download:hover {
   box-shadow: 0 4px 12px rgba(0, 212, 255, 0.1);
 }
 
-/* ===== MODAL ANIMATIONS ===== */
-#modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-  opacity: 0;
-  transition: opacity 300ms var(--ease-out-expo);
-}
 
-#modal-container.active {
-  display: flex;
-  opacity: 1;
-}
-
-.modal-content {
-  background: linear-gradient(135deg, #14141f, #1e1e2f);
-  padding: 32px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transform: scale(0.9) translateY(20px);
-  transition: transform 400ms var(--ease-spring);
-  max-width: 90vw;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-#modal-container.active .modal-content {
-  transform: scale(1) translateY(0);
-}
-
-.modal-content h2 {
-  color: var(--text-primary);
-  margin-bottom: 12px;
-}
-
-.modal-content p {
-  color: var(--text-secondary);
-}
-
-/* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

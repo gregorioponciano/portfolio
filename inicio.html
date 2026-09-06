@@ -107,20 +107,9 @@
     </div>
 
     <div class="content" id="div2"> <!-- Guia do Programador -->
-      <div id="modal-container">
-        <div class="modal-content">
-          <h2>Confirmar Download</h2>
-          <p>Você tem certeza que deseja baixar o arquivo <span id="file-name"></span>?</p>
-          <div class="modal-buttons">
-            <button id="confirm-btn">Baixar</button>
-            <button id="cancel-btn">Cancelar</button>
-          </div>
-        </div>
-      </div>
-
       <h1 class="h1-guia reveal">Guia do Programador</h1><br>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="1" onclick="toggleContent('guia1')"><img src="images/html.png" alt="img-html" class="img-guia"> HTML</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="1" onclick="toggleContent('guia1')"><img src="images/guia/html.png" alt="img-html" class="img-guia"> HTML</a><br>
       <div id="guia1" class="guia">
         <a href="https://gregorioponciano.github.io/html/ex001/listas.html" target="_blank">Listas</a><br>
         <a href="https://gregorioponciano.github.io/html/ex002/index.html" target="_blank">Ancoras</a><br>
@@ -128,11 +117,11 @@
         <a href="https://gregorioponciano.github.io/html/ex004/video.html" target="_blank">Video</a><br>
         <a href="https://gregorioponciano.github.io/html/ex007/fonte1.html" target="_blank">Fonte1</a>
         <a href="https://gregorioponciano.github.io/html/ex007/fonte2.html" target="_blank">Fonte2</a><br>
-        <a href="download/tabela.rar" target="_blank" class="btn-download">Tabela</a><br>
+        <a href="download/tabela.rar" target="_blank" class="btn-download">Tabela (donwload)</a><br>
         <a href="download/formulario.rar" target="_blank" class="btn-download">Formulário</a><br>
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="2" onclick="toggleContent('guia2')"> <img src="images/css.webp" alt="img-css" class="img-guia"> Css</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="2" onclick="toggleContent('guia2')"> <img src="images/guia/css.png" alt="img-css" class="img-guia"> Css</a><br>
       <div id="guia2" class="guia">
         <a href="https://gregorioponciano.github.io/html/ex006/cor.html" target="_blank">Cor</a><br>
         <a href="https://gregorioponciano.github.io/html/ex008/hover.html" target="_blank">Hover</a><br>
@@ -140,18 +129,23 @@
         <a href="https://gregorioponciano.github.io/html/ex013/mobilefirst/index.html" target="_blank">MediaQuery</a>
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="3" onclick="toggleContent('guia3')"><img src="images/js.png" alt="img-js" class="img-guia"> JavaScript</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="3" onclick="toggleContent('guia3')"><img src="images/guia/js.png" alt="img-js" class="img-guia"> JavaScript</a><br>
       <div id="guia3" class="guia">
         <a href="https://gregorioponciano.github.io/html/ex014/menu.html" target="_blank">Menu</a><br>
         <a href="https://gregorioponciano.github.io/html/ex015/index.html" target="_blank">Modal</a>
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="4" onclick="toggleContent('guia5')"> <img src="images/php.png" alt="img-php" class="img-guia"> PHP</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="4" onclick="toggleContent('guia5')"> <img src="images/guia/php.webp" alt="img-php" class="img-guia"> PHP</a><br>
       <div id="guia5" class="guia">
         <a href="download/cursophp.rar" class="btn-download">Curso PHP</a>
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="5" onclick="toggleContent('guia7')">NGROK</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="4" onclick="toggleContent('guia6')"> <img src="images/guia/python3.png" alt="img-php" class="img-guia"> Python</a><br>
+      <div id="guia5" class="guia">
+        <a href="" class="btn-download">Curso Python3</a>
+      </div>
+
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="5" onclick="toggleContent('guia7')"> <img src="images/guia/ngrok.png" alt="img-ngrok" class="img-guia"> NGROK</a><br>
       <div id="guia7" class="guia">
         <p>1 primeiro comando</p><br>
         <p>ngrok config add-authtoken (seu token)</p><br>
@@ -159,29 +153,36 @@
         <p>ngrok http http://localhost:8080</p>
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="6" onclick="toggleContent('guia9')">Tailwind</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="6" onclick="toggleContent('guia9')"><img src="images/guia/tailwind.png" alt="img-tailwind" class="img-guia">  Tailwind</a><br>
       <div id="guia9" class="guia">
         HTML CSS e JavaScript. exemplo <a href="download/tailwind.rar" class="btn-download" style="color: blue;">Tailwind</a><br>
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="7" onclick="toggleContent('guia10')">Electron</a>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="7" onclick="toggleContent('guia10')"> <img src="images/guia/electron.png" alt="img-electron" class="img-guia"> Electron</a>
       <div id="guia10" class="guia">
         cria um ambiente de software no pc <a href="download/electron.rar" class="btn-download" style="color: blue;">Electron</a><br>
+      </div><br>
+
+            <a href="javascript:void(0)" class="link-guia reveal" data-delay="8" onclick="toggleContent('guia11')"> <img src="images/guia/flutter.png" alt="img-flutter" class="img-guia"> Flutter</a>
+      <div id="guia11" class="guia"> realiza o desenvolvimento de aplicativos móveis, web e desktop a partir de uma única base de código.
+         <a href="https://flutter.dev/" style="color: blue;">Flutter</a><br>
       </div><br><br>
+
+
 
       <h1 class="reveal" data-delay="8">Sistema operacional</h1><br>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="8" onclick="toggleContent('guia12')">Linux</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="9" onclick="toggleContent('guia12')">Linux</a><br>
       <div id="guia12" class="guia">
         Configurações e ferramentas para desenvolvimento.
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="9" onclick="toggleContent('guia13')">Kali Linux</a><br>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="10" onclick="toggleContent('guia13')">Kali Linux</a><br>
       <div id="guia13" class="guia">
         Distribuição focada em segurança e testes de penetração.
       </div>
 
-      <a href="javascript:void(0)" class="link-guia reveal" data-delay="10" onclick="toggleContent('guia14')">macOS</a>
+      <a href="javascript:void(0)" class="link-guia reveal" data-delay="11" onclick="toggleContent('guia14')">macOS</a>
       <div id="guia14" class="guia">
         Sistema operacional para desenvolvedores Apple.
       </div><br><br>
@@ -223,6 +224,11 @@
 
     <div class="content" id="div3"> <!-- Portfólio -->
       <div class="portfolio">
+        <div class="link-loja reveal-scale" data-delay="0">
+          <img src="images/audify.jpeg" alt="foto" class="img-portfolio">
+          <h1><a href="download/audify.apk" class="btn-download">audify - Aplicativo de Música</a></h1>
+          <p>Flutter</p>
+        </div>
         <div class="link-loja reveal-scale" data-delay="1">
           <img src="images/portfolio/laravel.jpg" alt="foto" class="img-portfolio">
           <h1><a href="https://gregorioponciano.github.io/guia-laravel/" target="_blank">Laravel - Framework</a></h1>
@@ -291,6 +297,21 @@
       <li><a href="javascript:void(0)" class="a-menu contato" onclick="showDiv('div4')">Contato</a></li>
     </ul>
   </nav>
+
+  <div id="modal-container">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Confirmar Download</h2>
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar">&times;</button>
+          </div>
+          <p>Você tem certeza que deseja baixar o arquivo <span id="file-name"></span>?</p>
+          <div class="modal-buttons">
+            <button id="confirm-btn">Baixar</button>
+            <button id="cancel-btn">Cancelar</button>
+          </div>
+        </div>
+  </div>
 
   <script src="js/showMenu.js"></script>
   <script src="js/guia.js"></script>

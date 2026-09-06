@@ -5,34 +5,24 @@
   var confirmBtn = document.getElementById('confirm-btn');
   var cancelBtn = document.getElementById('cancel-btn');
   var fileNameSpan = document.getElementById('file-name');
+  var closeBtn = document.getElementById('modal-close-btn');
   var pendingUrl = null;
 
   function showModal() {
     if (!modalContainer) return;
 
-    modalContainer.style.display = 'flex';
-    modalContainer.style.opacity = '0';
+    modalContainer.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
     var modalContent = modalContainer.querySelector('.modal-content');
     if (modalContent) {
-      modalContent.style.transform = 'scale(0.94) translateY(12px)';
-      modalContent.style.opacity = '0';
-    }
-
-    requestAnimationFrame(function () {
       requestAnimationFrame(function () {
-        modalContainer.style.transition = 'opacity 250ms cubic-bezier(0.25, 1, 0.5, 1)';
-        modalContainer.style.opacity = '1';
-
-        if (modalContent) {
-          modalContent.style.transition = 'transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 250ms cubic-bezier(0.25, 1, 0.5, 1)';
+        requestAnimationFrame(function () {
           modalContent.style.transform = 'scale(1) translateY(0)';
           modalContent.style.opacity = '1';
-        }
+        });
       });
-    });
-
-    modalContainer.classList.add('active');
+    }
   }
 
   function hideModal() {
@@ -40,70 +30,83 @@
 
     var modalContent = modalContainer.querySelector('.modal-content');
 
-    modalContainer.style.opacity = '0';
-
     if (modalContent) {
-      modalContent.style.transform = 'scale(0.96) translateY(8px)';
+      modalContent.style.transform = 'scale(0.94) translateY(10px)';
       modalContent.style.opacity = '0';
     }
 
-    setTimeout(function () {
-      modalContainer.style.display = 'none';
-      modalContainer.style.opacity = '';
-      modalContainer.style.transition = '';
-      modalContainer.classList.remove('active');
+    document.body.style.overflow = '';
 
+    setTimeout(function () {
+      modalContainer.classList.remove('active');
+    }, 300);
+
+    setTimeout(function () {
       if (modalContent) {
         modalContent.style.transform = '';
         modalContent.style.opacity = '';
-        modalContent.style.transition = '';
       }
-    }, 300);
+    }, 600);
   }
 
-  document.querySelectorAll('.btn-download').forEach(function (link) {
-    link.addEventListener('click', function (event) {
-      event.preventDefault();
-      pendingUrl = this.getAttribute('href');
+  function init() {
+    document.querySelectorAll('.btn-download').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        pendingUrl = this.getAttribute('href');
 
-      if (fileNameSpan) {
-        fileNameSpan.textContent = pendingUrl.split('/').pop();
-      }
+        if (fileNameSpan) {
+          fileNameSpan.textContent = pendingUrl.split('/').pop();
+        }
 
-      showModal();
+        showModal();
+      });
     });
-  });
 
-  if (confirmBtn) {
-    confirmBtn.addEventListener('click', function () {
-      if (pendingUrl) {
-        window.location.href = pendingUrl;
-      }
-      hideModal();
-      pendingUrl = null;
-    });
-  }
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', function () {
+        if (pendingUrl) {
+          window.location.href = pendingUrl;
+        }
+        hideModal();
+        pendingUrl = null;
+      });
+    }
 
-  if (cancelBtn) {
-    cancelBtn.addEventListener('click', function () {
-      hideModal();
-      pendingUrl = null;
-    });
-  }
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function () {
+        hideModal();
+        pendingUrl = null;
+      });
+    }
 
-  if (modalContainer) {
-    modalContainer.addEventListener('click', function (event) {
-      if (event.target === modalContainer) {
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        hideModal();
+        pendingUrl = null;
+      });
+    }
+
+    if (modalContainer) {
+      modalContainer.addEventListener('click', function (event) {
+        if (event.target === modalContainer || event.target.classList.contains('modal-overlay')) {
+          hideModal();
+          pendingUrl = null;
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && modalContainer && modalContainer.classList.contains('active')) {
         hideModal();
         pendingUrl = null;
       }
     });
   }
 
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && modalContainer && modalContainer.classList.contains('active')) {
-      hideModal();
-      pendingUrl = null;
-    }
-  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
