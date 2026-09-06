@@ -14,7 +14,7 @@
 }
 
 .img-guia {
-  width: 15px;
+  width: 25px;
 }
 
 .guia {
@@ -38,7 +38,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-subtle);
   transition: all 0.3s var(--ease-out-expo);
-  font-size: 0.95rem;
+  font-size: 1.95rem;
 }
 
 .guia-link:hover {
